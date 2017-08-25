@@ -6,11 +6,11 @@ echo "new line"
 set /p passvar1="enter your pass:  "
 set /p passvar2="confirm your pass:  "
 
-if not "%passvar1%" == "%passvar2%"  (
+if ["%passvar1%" != "%passvar2%"]; then  
 	echo "Pass does not match"
 	echo "retype your pass" 
-	goto Retypepass
-	)
+	goto Retypepass;
+fi
 
 echo "you did good job"
 echo "your pass is %passvar2%"
